@@ -1,0 +1,817 @@
+/*CSS document*/
+
+
+/********** MAIN *************************/
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+}
+
+div {
+    width: 100%;
+}
+
+body {
+    width: 100%;
+    font-family: 'Nunito Sans', sans-serif;
+    color: black;
+    background-image: url("/images/baggrund.jpg");
+    background-repeat: repeat;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    padding: 8% 2% 2% 2%;
+}
+
+h2 {
+    font-size: 18px;
+    padding: 6% 2% 2% 2%;
+}
+
+h3 {
+    font-size: 16px;
+    padding: 5% 2% 2% 2%;
+}
+
+h4 {
+    font-size: 14px;
+    padding: 5% 2% 2% 2%;
+}
+
+p {
+    font-size: 12px;
+}
+
+li {
+    margin-left: 3%;
+    padding: 1% 0%;
+    font-size: 13px;
+}
+
+#logo {
+    width: 30%;
+}
+
+.inside {
+    list-style-position: inside;
+}
+
+/********* HEADER ************************/
+
+/* ------ MENUBAR -----------------------*/
+/* fra itaddiction.github.io */
+
+header {
+    display: flex;
+    background: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    padding: 0 20px;
+    padding: 0 20px;
+    top: 0;
+    z-index: 1;
+    position: -webkit-sticky;
+    position: sticky;
+}
+
+#logo-burger {
+    display: flex;
+    align-items: center;
+    margin-left: .5em;
+}
+
+.logo1 {
+    display: flex;
+    width: 80px;
+    position: relative;
+    margin: 4% 0% 8% 0%;
+}
+
+#logo a,
+#main-nav a {
+    color: black;
+    text-decoration: none;
+}
+
+#main-nav {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: .5em;
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    align-items: center;
+}
+
+#main-nav a {
+    display: flex;
+    margin: 0 25px;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+#main-nav a:hover {
+    color: darkgray;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.active {
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+label {
+    display: none;
+}
+
+/*---------------------------------------*/
+
+@media only screen and (max-width: 900px) {
+
+    header {
+        display: block;
+    }
+
+    #logo-burger {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #logo-burger label {
+        display: block;
+        font-size: 32px;
+        cursor: pointer;
+    }
+
+    #toggle:checked + #main-nav {
+        display: block;
+    }
+
+    #main-nav {
+        display: none;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    #main-nav li {
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    #main-nav a {
+        margin: 0;
+        line-height: 50px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    #main-nav li:last-of-type {
+        border-bottom: none;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/********* FOOTER *************************/
+
+footer {
+    width: 100%;
+    background: black;
+    color: #ebefe8;
+    padding: 5%;
+    text-align: center;
+}
+
+.socialemedier {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+
+.socialemedier img {
+    width: 5%;
+    height: 5%;
+    margin: 3%;
+    align-content: space-between;
+}
+
+/*######## STYLING AF SITE ###############*/
+/*------- Knapper ----------------------*/
+
+.button,
+.buttonalle {
+    width: 40%;
+    border-radius: 2%;
+    background-color: #5f6363;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 12px;
+    padding: 3%;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 3%;
+    border-radius: 30px;
+}
+
+.button span,
+.buttonalle span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span::after,
+.buttonalle span::after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.8s;
+}
+
+.button:hover span,
+.buttonalle:hover span {
+    padding-right: 15%;
+}
+
+.button:hover span::after,
+.buttonalle:hover span::after {
+    opacity: 0.5;
+    right: 0;
+}
+
+.button:hover span,
+.buttonalle:hover span {
+    padding-right: 25px;
+}
+
+/********* FORSIDE *********************/
+.intro {
+    background: url("../images/forside-baggrund-mobile.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 60vh;
+    margin: 0 auto;
+}
+
+.intro h1 {
+    padding: 50% 12% 10%;
+}
+
+.intro p {
+    padding: 0% 12%;
+}
+
+.baggrund {
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-color: rgba(235, 239, 232, 0.9);
+    margin: 5% auto;
+    border-width: 2px;
+    border-style: outset;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.forside-opskrift,
+#historie,
+.naringsindhold {
+    padding: 5%;
+}
+
+.forside-opskrift h1,
+#historie h1,
+.naringsindhold h1 {
+    padding: 8% 0 5%;
+}
+
+.forside-opskrift p,
+#historie p,
+.naringsindhold p {
+    padding: 5% 0;
+}
+
+/*---------- historie ------------------*/
+
+#historie {
+    width: 90%;
+    margin: 5%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 10% 45% 45%;
+    grid-template-areas: "historie-overskrift historie-overskrift""historie-tekst historie-img""historie-tekst historie-img";
+    padding: 5%;
+    border-radius: 10px;
+}
+
+.historie-overskrift {
+    grid-area: historie-overskrift;
+    padding: 2%;
+}
+
+.historie-tekst {
+    grid-area: historie-tekst;
+    padding: 0% 8%;
+    text-align: left;
+}
+
+.historie-img {
+    grid-area: historie-img;
+}
+
+/*---------- næringsindhold ------------------*/
+
+.naringsindhold h3,
+.naringsindhold p {
+    text-align: left;
+}
+
+.baggrund .naringsindhold h3 {
+    padding: 5% 0 0;
+}
+
+.baggrund .naringsindhold p {
+    padding: 1% 0 2% 0;
+}
+
+/********* OPSKRIFTER ******************/
+
+.baggrund p {
+    padding: 5%;
+}
+
+.oversigt {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    align-content: center;
+    margin: 0 auto;
+}
+
+.opskrift {
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-color: rgba(235, 239, 232, 0.9);
+    margin: 1% auto;
+    border-width: 2px;
+    border-style: outset;
+    border-radius: 10px;
+    padding: 6%;
+}
+
+.opskrift h2 {
+    padding: 8% 0% 0%;
+    text-align: center;
+}
+
+.opskrift p {
+    padding: 5% 0%;
+}
+
+.opskrift a {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 5%;
+}
+
+/********* SELVE OPSKRIFTERNE ******************/
+.row {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    margin: 0 auto;
+}
+
+.container-opskrifter {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 5%;
+}
+
+.container-opskrifter div {
+    padding: 4% 0%;
+}
+
+.icon-opskrift {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 5%;
+}
+
+.icon-opskrift img {
+    width: 10%;
+    align-self: center;
+}
+
+.icon-opskrift p {
+    width: 90%;
+    text-align: left;
+}
+
+.row .icon-opskrift img {
+    width: 20%;
+}
+
+.saadan li {
+    padding-bottom: 3%;
+}
+
+.buttonalle {
+    width: 40%;
+    margin: 6%;
+}
+
+#ekstrabillede {
+    display: flex;
+    width: 70%;
+    align-items: center;
+    margin: 0 auto;
+}
+
+iframe {
+    margin: 0 auto;
+    align-content: center;
+}
+
+
+/*@@@@@@@@@@ MEDIA QUERY MOBILE @@@@@@@@@@@ */
+
+
+/* ######### FOR MOBILE ################## */
+@media only screen and (max-width:480px) {
+
+    /********* FORSIDE ******************** */
+    .historie-billede,
+    .melpose-bord {
+        display: none;
+    }
+}
+
+
+/* ####### FOR TABLET #################### */
+@media only screen and (min-width:481px) and (max-width: 849px) {
+
+    .button {
+        width: 20%;
+        padding: 3%;
+    }
+
+    .baggrund {
+        width: 85%;
+            grid-template-rows: 20% 40% 40%;
+            grid-template-columns: 55% 45%;
+        margin: 5% auto;
+    }
+
+    p {
+        font-size: 13px;
+    }
+
+    /********* FORSIDE ******************** */
+
+    .intro h1 {
+        padding: 20% 12% 5%;
+    }
+
+    .intro p {
+        padding: 0% 12%;
+    }
+
+    .forside-opskrift-a .button {
+        width: 20%;
+        padding: 1%;
+    }
+
+    .historie-billede,
+    .melpose-bord {
+        display: none;
+    }
+
+    .naringsindhold {
+        padding: 8% 5%;
+    }
+
+
+    /********* OPSKRIFTER ************* */
+    .oversigt {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .opskrift {
+        width: 45%;
+        padding: 4%;
+    }
+
+    .opskrift img {
+        padding: 0%;
+    }
+
+    .opskrift .button {
+        width: 60%;
+        padding: 3% 0%;
+    }
+
+    /* ******** SELVE OPSKRIFTERNE *********** */
+
+    .row .icon-opskrift img {
+        width: 10%;
+        align-self: center;
+    }
+
+    .container-opskrifter {
+        padding: 0 5%;
+    }
+
+    .icon-opskrift {
+        padding: 0 5%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container-opskrifter {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 0.5fr 0.75fr;
+        grid-template-areas: "opskrift-img opskrift-img""ingredienser bagetid""saadan saadan";
+    }
+
+    .bagetid {
+        grid-area: bagetid;
+    }
+
+    .saadan {
+        grid-area: saadan;
+    }
+
+    .opskrift-img {
+        grid-area: opskrift-img;
+    }
+
+    .ingredienser {
+        grid-area: ingredienser;
+    }
+
+    .buttonalle {
+        width: 30%;
+        margin: 5%;
+    }
+
+    #ekstrabillede {
+        display: flex;
+        width: 70%;
+        align-items: center;
+        margin: 0 auto;
+    }
+}
+
+
+/* ######## FOR LAPTOP ############### */
+@media only screen and (min-width: 850px) {
+
+    p {
+        font-size: 15px;
+    }
+
+    .button {
+        width: 15%;
+        padding: 1%;
+    }
+
+    /********* FOOTER *************************/
+
+    footer {
+        padding: 2% 0%;
+    }
+
+    .socialemedier img {
+        width: 3%;
+        height: 3%;
+        margin: 1%;
+    }
+
+
+
+    /* ******** FORSIDE ************ */
+    .intro {
+        background: url("../images/forside-baggrund-web.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        height: 70vh;
+        margin: 0 auto;
+    }
+
+    .intro h1 {
+        padding: 12% 12% 3%;
+        font-size: 50px;
+    }
+
+    .intro p {
+        padding: 0% 12%;
+        font-size: 20px;
+    }
+
+    .baggrund {
+        width: 80%;
+        padding: 5%;
+        margin: 5% auto;
+    }
+
+    .baggrund h1 {
+        font-size: 40px;
+    }
+
+    .forside-opskrift,
+    #historie,
+    .naringsindhold {
+        padding: 3%;
+    }
+
+    /* -------- opskrift ------------- */
+
+    .grid-container-forside-opskrift {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "forside-opskrift-img forside-opskrift-img forside-opskrift-p""forside-opskrift-img forside-opskrift-img forside-opskrift-a";
+    }
+
+    .forside-opskrift-p {
+        grid-area: forside-opskrift-p;
+    }
+
+    .forside-opskrift-a {
+        grid-area: forside-opskrift-a;
+    }
+
+    .forside-opskrift-img {
+        grid-area: forside-opskrift-img;
+    }
+
+    .forside-opskrift-p p {
+        padding-left: 10%;
+        text-align: left;
+        font-size: 14px;
+    }
+
+    .forside-opskrift-a .button {
+        width: 60%;
+        padding: 2%;
+    }
+
+
+    /* -------- historien ------------- */
+
+    #historie {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .historie-img {
+        display: none;
+    }
+
+    .historie-billede {
+        padding: 5%;
+        width: 100%;
+    }
+
+    /* ******** OPSKRIFTER *********** */
+
+    .oversigt {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 80%;
+    }
+
+    .opskrift {
+        width: 30%;
+        padding: 2%;
+    }
+
+    .opskrift .button {
+        width: 60%;
+        padding: 2% 1%;
+    }
+
+    .opskrift-intro {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .baggrund .opskrift-intro img {
+        margin: 0 auto;
+    }
+
+    .melpose-bord {
+        width: 40%;
+        padding: 3%;
+        align-self: center;
+    }
+
+    .img-born {
+        width: 60%;
+        padding: 3%;
+        align-self: center;
+    }
+
+
+    /* ******** SELVE OPSKRIFTERNE *********** */
+
+    .baggrund h1 {
+        padding: 0 0 8%;
+    }
+
+    .row {
+        padding: 0% 0% 5%;
+        align-content: space-around;
+    }
+
+    .row .icon-opskrift img {
+        width: 10%;
+        align-self: center;
+    }
+
+    .icon-opskrift {
+        padding: 0 5%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .container-opskrifter {
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.5fr 0.07fr 0.45fr;
+        grid-template-areas: "ingredienser opskrift-img""ingredienser bagetid""saadan saadan";
+    }
+
+    .ingredienser {
+        grid-area: ingredienser;
+    }
+
+    .opskrift-img {
+        grid-area: opskrift-img;
+    }
+
+    .bagetid {
+        grid-area: bagetid;
+    }
+
+    .saadan {
+        grid-area: saadan;
+    }
+
+    .buttonalle {
+        width: 25%;
+        margin: 5%;
+        padding: 3%;
+    }
+
+    #ekstrabillede {
+        display: flex;
+        width: 60%;
+        align-items: center;
+        margin: 0 auto;
+    }
+}
